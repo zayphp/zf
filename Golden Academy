@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golden Academy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset */
+    /* Reset + kursor sozlamasi */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: default;
+}
+
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      background: #111;
+      color: #f5f5f5;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(10px);
+      color: #fff;
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      color: #ffd700;
+    }
+
+    .navbar ul {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #ffd700;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 26px;
+      cursor: pointer;
+      color: #fff;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #000, #222);
+      color: #ffd700;
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #f5f5f5;
+    }
+
+    /* Sections */
+    .section {
+      padding: 10px 20px;
+      text-align: center;
+    }
+
+    .section h2 {
+      color: #ffd700;
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+
+    .content-box {
+      background: #1c1c1c;
+      padding: 25px;
+      margin: 20px auto;
+      max-width: 700px;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+      transition: 0.3s;
+    }
+
+    .content-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+    }
+
+    /* Tarmoq */
+
+.btna {
+      display: inline-block;
+      margin: 10px;
+      padding: 14px 20px;
+      border: none;
+      border-radius: 999px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #fff;
+      transition: 0.3s;
+    }
+
+    .telegram {
+      background: linear-gradient(55deg, #0088cc, #00a8ff, #005f8d, #1e90ff);
+    }
+
+    .instagram {
+      background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+    }
+
+    .whatsapp {
+      background: linear-gradient(55deg, #25d366, #2ecc71, #00b894, #128c7e);
+    }
+    
+    .telefon {
+      background: linear-gradient(145deg, #ffd700, #ffb700, #ffdb58, #ffcc00);
+    }
+    .btna:hover {
+      transform: scale(1.06);
+      opacity: 0.9;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, #ffd700, #ffae00);
+      color: #111;
+      font-weight: 600;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      background: linear-gradient(135deg, #ffae00, #ffd700);
+    }
+
+    /* Footer */
+    footer {
+      background: #000;
+      color: #888;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .navbar ul {
+        flex-direction: column;
+        background: #111;
+        position: absolute;
+        top: 65px;
+        right: 0;
+        width: 220px;
+        display: none;
+        padding: 15px;
+        border-radius: 10px 0 0 10px;
+      }
+
+      .navbar.active ul {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Header / Navbar -->
+  <header>
+    <h1 class="logo" onclick="scrollToHome()" style="cursor:pointer;">🎓 Golden Academy</h1>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#home">Bosh sahifa</a></li>
+        <li><a href="#videos">Videolar</a></li>
+        <li><a href="#audio">Audio</a></li>
+        <li><a href="#books">Kitoblar</a></li>
+        <li><a href="#articles">Maqolalar</a></li>
+        <li><a href="#contact">Aloqa</a></li>
+      </ul>
+    </nav>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </header>
+
+  <!-- Bosh sahifa -->
+  <section id="home" class="hero">
+    <h1>"Golden Academy"ga Xush Kelibsiz</h1>
+    <p>Ushbu sayt "Golden Academy"ga tegishli bo'lib unda har hil elektron ko'rinishga ega bo'lgan ma'lumotlarni olishingiz mumkin, xususan Video, Audio, Maqola va Kitoblarni Yuklab olishingiz va o'qish yoki ko'rishingiz mumkin </p>
+    <a href="#videos" class="btn">Boshlash →</a>
+  </section>
+
+  <!-- Videolar -->
+  <section id="videos" class="section">
+    <h2>🎥 Videolar</h2>
+    <div class="content-box">
+      <p>Bu yerda video darslar joylanadi (YouTube iframe orqali).</p>
+    </div>
+  </section>
+
+  <!-- Audio -->
+  <section id="audio" class="section">
+    <h2>🎧 Audio</h2>
+    <div class="content-box">
+      <p>Bu yerda audio fayllar qo‘yiladi (mp3 player bilan).</p>
+    </div>
+  </section>
+
+  <!-- Kitoblar -->
+  <section id="books" class="section">
+    <h2>📚 Kitoblar</h2>
+    <div class="content-box">
+      <p>Bu yerda yuklab olinadigan kitoblar bo‘ladi.</p>
+      <a href="#" class="btn">📥 Yuklab olish</a>
+    </div>
+  </section>
+
+  <!-- Maqolalar -->
+  <section id="articles" class="section">
+    <h2>📝 Maqolalar</h2>
+    <div class="content-box">
+      <p>Bu yerda maqolalar joylanadi.</p>
+    </div>
+  </section>
+
+  <!-- Aloqa Zoir-->
+  <section id="contact" class="section">
+    <h2>📞 Murojat uchun ⬇️</h2>
+    <p>Inglis tili : Fan o'qituvchisi Nazarov Zoir</p>
+    <a href="https://t.me/sidiqivich" target="_blank"><button class="btna telegram">Telegram</button></a>
+    <a href="https://instagram.com/sidiqivich" target="_blank"><button class="btna instagram">Instagram</button></a>
+    <a href="https://wa.me/998936010203" target="_blank"><button class="btna whatsapp">WhatsApp</button></a>
+    <a href="tel:+998901234567" target="_blank"><button class="btna telefon">Murojat uchun Telefon</button></a>
+  </section>
+
+  <!-- Aloqa Farux-->
+  <section id="contact" class="section">
+    <p>Matematika : Fan o'qituvchisi Farrux</p>
+    <a href="https://t.me/sidiqivich" target="_blank"><button class="btna telegram">Telegram</button></a>
+    <a href="https://instagram.com/sidiqivich" target="_blank"><button class="btna instagram">Instagram</button></a>
+    <a href="https://wa.me/998936010203" target="_blank"><button class="btna whatsapp">WhatsApp</button></a>
+    <a href="tel:+998901234567" target="_blank"><button class="btna telefon">Murojat uchun Telefon</button></a>
+  </section>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Uquv Markazi. Barcha huquqlar himoyalangan.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('.navbar').classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
